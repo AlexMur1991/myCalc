@@ -12,10 +12,10 @@ private int randomNum = (int) (Math.random() * 100);
 
     public static void main(String[] args) {
         NumbersGame game  = new NumbersGame();
-        game.getInt();
+        game.playGame();
     }
 
-    private void getInt(){
+    private void playGame(){
 
         System.out.println("Введите число от 0 до 100. У вас 10 жизней!");
         for(int i = 9; i >= 0; i--) {
