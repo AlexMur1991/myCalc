@@ -12,7 +12,7 @@ public class ConsoleCalc {
     private static  int getInt(){
         Scanner scan = new Scanner(System.in);
         int num;
-        System.out.println("Введите число: ");
+        System.out.print("Введите число: ");
         if (scan.hasNextInt()) {
             num = scan.nextInt();
         }else {
@@ -22,7 +22,7 @@ public class ConsoleCalc {
     }
     private char  getOperation (){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите операцию: ");
+        System.out.print("Введите операцию: ");
         char operation = scan.nextLine().charAt(0);
         return operation;
     }
