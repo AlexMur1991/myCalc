@@ -1,4 +1,4 @@
-package consoleCalc;
+package myHomeWorks;
 
 import java.util.Scanner;
 

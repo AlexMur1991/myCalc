@@ -6,18 +6,34 @@ import java.util.Scanner;
 //если нет,  то программа подсказажет больше или меньше введенная сумма относительно искомого числа
 
 public class NumbersGame {
-private int randomNum = (int) (Math.random() * 100);
+private int randomNum;
+private int minNumberRange;
+private int maxNumberRange;
 
 
 
     public static void main(String[] args) {
         NumbersGame game  = new NumbersGame();
+        game.rangeMathRandom();
         game.playGame();
+
+        System.out.println();
+    }
+    // метод range принимает минимальные и максимальные числа для создания диапазона в котором рандомно выбирается число.
+    public  void rangeMathRandom(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Давайте создадим диапазон в котором будем угадывать число.\n" +
+                "Введите минимальное число диапазона: ");
+        minNumberRange = scanner.nextInt();
+        System.out.println("Теперь введите максимальное число диапазона");
+        maxNumberRange = scanner.nextInt();
+        randomNum = (int) (Math.random() * (maxNumberRange - minNumberRange) + minNumberRange);
+
     }
 
     private void playGame(){
-
-        System.out.println("Введите число от 0 до 100. У вас 10 жизней!");
+        System.out.println("Настало время угадать число в диапазоне от " + minNumberRange + "до " +
+                maxNumberRange + ". У вас 10 жизней!");
         for(int i = 9; i >= 0; i--) {
             Scanner scan = new Scanner(System.in);
 
